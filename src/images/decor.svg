@@ -1,0 +1,11 @@
+<svg width="233" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233.5 11.4">
+<style type="text/css">
+	.st0{fill:#1D3F7A;}
+	.st1{fill:none;stroke:#1D3F7A;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="st0" d="M115.8,10.7l-4-3.9c-0.7-0.6-0.7-1.7,0-2.3l4-3.9c0.7-0.6,1.7-0.6,2.4,0l4,3.9c0.7,0.6,0.7,1.7,0,2.3l-4,3.9C117.5,11.3,116.5,11.3,115.8,10.7z"/>
+	<line class="st1" x1="0.6" y1="5.7" x2="105.3" y2="5.7"/>
+	<line class="st1" x1="128.2" y1="5.7" x2="232.9" y2="5.7"/>
+</g>
+</svg>
