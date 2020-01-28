@@ -12,7 +12,7 @@
   justify-content: center
   line-height: 18px
   min-width: 168px
-  padding: 18px 16px 17px
+  padding: 15px 16px 15px
   text-decoration: none
   text-align: center
   transition: background-color 0.3s, color 0.3s, border-color 0.3s
@@ -32,6 +32,7 @@
   &:hover,
   &:active
     background-color: lighten(#1d3f7a, 5%)
+    border-color: lighten(#1d3f7a, 5%)
     color: #fff
 
   &:disabled,
@@ -49,6 +50,7 @@
     &:hover,
     &:active
       background-color: lighten(#3eb7ae, 5%)
+      border-color: lighten(#3eb7ae, 5%)
       color: #fff
 
   &--white
@@ -82,3 +84,7 @@
     &--review
       height: 21px
       width: 21px
+
+input.button
+  padding-top: 0
+  padding-bottom: 0

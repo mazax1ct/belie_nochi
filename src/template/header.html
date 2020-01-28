@@ -1,5 +1,64 @@
 <header class="header">
-    <div class="container">
-        Шапка 1
+  <div class="header__inner container">
+    <div class="header__left">
+      <a class="header__sogaz-logo" href="#">
+        <svg class="header__sogaz-svg" aria-hidden="true">
+          <use xlink:href="#sogaz" />
+        </svg>
+      </a>
+      <a class="header__wn-logo" href="#">
+        <svg class="header__wn-svg" aria-hidden="true">
+          <use xlink:href="#wn" />
+        </svg>
+      </a>
     </div>
+    <div class="header__center">
+      <button class="js-menu-closer menu-opener menu-opener--closer" type="button" title="Закрыть меню">
+        <svg class="menu-opener__icon" aria-hidden="true">
+          <use xlink:href="#close" />
+        </svg>
+      </button>
+      <div class="header__menu-title">Меню</div>
+      <ul class="main-menu">
+        <li class="main-menu__item"><a class="main-menu__link" href="#">О нас</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#">Проживание</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#">Лечебные программы</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#">Медицинские услуги</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#">Спецпредложения</a></li>
+      </ul>
+      <div class="header__contacts">
+        <p class="header__contacts-block">Санкт-Петербург, 38-й км,<br> Приморского шоссе, д. 2</p>
+        <p class="header__contacts-block">
+          <a href="tel:+78002001141">+7 800 200-11-41</a> (отдел продаж)<br>
+          <a href="tel:+78123098142">+7 812 309-81-42</a>
+        </p>
+      </div>
+    </div>
+    <div class="header__right">
+      <div class="social-links">
+        <a class="social-link" href="#" title="Наша группа Вконтакте" rel="noreferrer nofollow noopener">
+          <svg class="social-link__icon" aria-hidden="true">
+            <use xlink:href="#vk" />
+          </svg>
+        </a>
+        <a class="social-link" href="#" title="Наша страница на Facebook" rel="noreferrer nofollow noopener">
+          <svg class="social-link__icon" aria-hidden="true">
+            <use xlink:href="#fb" />
+          </svg>
+        </a>
+        <a class="social-link" href="#" title="Наш Instagram" rel="noreferrer nofollow noopener">
+          <svg class="social-link__icon" aria-hidden="true">
+            <use xlink:href="#inst" />
+          </svg>
+        </a>
+      </div>
+      <a class="button button--h50" href="#">Забронировать</a>
+    </div>
+    <button class="js-menu-opener menu-opener" type="button" title="Открыть меню">
+      <svg class="menu-opener__icon" aria-hidden="true">
+        <use xlink:href="#burger" />
+      </svg>
+    </button>
+  </div>
+  <div class="header__shadow"></div>
 </header>

@@ -1,0 +1,124 @@
+.news-block
+  margin-bottom: 75px
+
+  @media(min-width: 1200px)
+    margin-bottom: 100px
+
+.news-list
+  margin-bottom: 30px
+
+  @media(min-width: 992px)
+    display: flex
+    margin-left: -27px
+    margin-right: -27px
+
+  @media(min-width: 1200px)
+    margin-bottom: 100px
+
+  &__item
+    @media(min-width: 992px)
+      padding-left: 27px
+      padding-right: 27px
+      width: 33.33333%
+
+    &:not(:first-child)
+      @media(max-width: 991px)
+        display: none
+
+.news-item
+  border-radius: 10px
+  box-shadow: 0px 8px 27px 0px rgba(100,177,172,0.4)
+  display: block
+  max-width: 260px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  text-decoration: none
+
+  @media(min-width: 992px)
+    max-width: 398px
+
+  &:hover,
+  &:focus
+    .news-item__title
+      text-decoration: underline
+
+    .news-item__image
+      transform: scale(1.02)
+
+  &__date
+    background-color: #38bab0
+    border-radius: 4px
+    color: #fff
+    display: block
+    font-size: 12px
+    left: auto
+    padding: 11px 14px
+    position: absolute
+    right: 16px
+    top: -10px
+    z-index: 1
+
+    @media(min-width: 1400px)
+      font-size: 18px
+      padding-left: 24px
+      padding-right: 24px
+      right: 25px
+      top: -15px
+
+  &__image-block
+    border-radius: 10px 10px 0 0
+    display: block
+    overflow: hidden
+    max-height: 366px
+
+  &__image
+    background-color: #ccc
+    border-radius: 10px
+    background-repeat: no-repeat
+    display: block
+    padding-bottom: 100%
+    transform: scale(1)
+    transition: transform 0.3s
+    will-change: transform
+
+  &__title
+    align-items: center
+    background-color: #fff
+    border-radius: 0 0 10px 10px
+    display: flex
+    padding: 20px 25px 25px
+    position: relative
+
+    @media(min-width: 1400px)
+      font-size: 24px
+      padding: 20px 40px 35px
+
+  &__title-decor
+    display: block
+    height: 20px
+    overflow: hidden
+    left: 0
+    position: absolute
+    top: -20px
+    width: 100%
+
+    @media(min-width: 1400px)
+      height: 29px
+      top: -29px
+
+    &::after
+      box-shadow: 0 0 0 20px #fff
+      border-radius: 180px / 20px
+      content: ''
+      display: block
+      height: 90px
+      left: 50%
+      position: absolute
+      transform: translate(-50%, -75px)
+      width: 110%
+
+      @media(min-width: 1400px)
+        box-shadow: 0 0 0 36px #fff
+        border-radius: 180px / 46px
+        transform: translate(-50%, -62px)

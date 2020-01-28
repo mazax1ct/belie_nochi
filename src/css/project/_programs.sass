@@ -1,0 +1,115 @@
+.programs-block
+  margin-bottom: 70px
+
+  @media(min-width: 1200px)
+    margin-bottom: 100px
+
+.programs-list
+  margin-bottom: 60px
+
+  @media(min-width: 992px)
+    display: flex
+
+  @media(min-width: 1200px)
+    margin-bottom: 85px
+
+  &__item
+    @media(min-width: 992px)
+      width: 33.33333%
+
+  .slick-arrow
+    background-color: #3cb7ad
+    border-radius: 50%
+    height: 37px
+    top: 112px
+    width: 37px
+
+    &__icon
+      height: 16px
+      width: 7px
+
+.program
+  margin-left: auto
+  margin-right: auto
+  max-width: 200px
+  padding-top: 12px
+
+  @media(min-width: 1200px)
+    max-width: 270px
+
+  &__image-block
+    margin-bottom: 35px
+    position: relative
+
+    @media(min-width: 1200px)
+      margin-bottom: 50px
+
+    img
+      box-shadow: 0px 8px 27px 0px rgba(100,177,172,0.4)
+      border-radius: 50%
+
+  &__days
+    align-items: center
+    background-color: #1d3f7a
+    border-radius: 50%
+    color: #fff
+    display: flex
+    font-size: 12px
+    height: 58px
+    justify-content: center
+    left: auto
+    line-height: 1.2
+    position: absolute
+    padding-bottom: 4px
+    right: 6px
+    top: -12px
+    text-align: center
+    width: 58px
+
+    @media(min-width: 1200px)
+      font-size: 16px
+      height: 76px
+      width: 76px
+
+  &__info
+    font-size: 14px
+
+    @media(min-width: 1200px)
+      font-size: 16px
+      padding-left: 25px
+      padding-right: 25px
+
+    ol
+      list-style-type: none
+      counter-reset: num
+      margin: 0
+      padding: 0
+
+      & > li
+        color: #1c3877
+        margin-bottom: 5px
+        padding-left: 20px
+
+        &::before
+          content: counter(num) '. '
+          counter-increment: num
+          color: #38b9af
+          margin-left: -15px
+
+      ul
+        color: #000
+        list-style: none
+        margin: 0
+        padding: 0 0 0 1px
+
+        li
+          margin-top: 5px
+
+  &__title
+    color: #1c3877
+    font-size: 18px
+    margin-bottom: 10px
+
+    @media(min-width: 1200px)
+      font-size: 24px
+      margin-bottom: 20px
