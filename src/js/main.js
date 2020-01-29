@@ -41,6 +41,30 @@ $(document).ready(function () {
     });
   }
 
+  //слайдер новостей
+  if ($('.js-news-list').length) {
+    if($('body').width() < 991) {
+      $('.js-news-list').slick({
+        autoplay: false,
+        mobileFirst: true,
+        slidesToShow: 1,
+        infinite: true,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow" title="Назад"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#arrow_left"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow" title="Вперед"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#arrow_right"/></svg></button>',
+        dots: false,
+        responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2
+            }
+          }
+        ]
+      });
+    }
+  }
+
   //слайдер программ
   if ($('.js-programs-slider').length) {
     if($('body').width() < 991) {
@@ -64,6 +88,37 @@ $(document).ready(function () {
       });
     }
   }
+
+  //слайдер отзывов
+  if ($('.js-reviews-list').length) {
+    $('.js-reviews-list').slick({
+      adaptiveHeight: true,
+      autoplay: false,
+      mobileFirst: true,
+      slidesToShow: 1,
+      infinite: true,
+      arrows: true,
+      appendArrows: $('.reviews-buttons'),
+      prevArrow: '<button type="button" class="slick-prev slick-arrow" title="Назад"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#arrow_left"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next slick-arrow" title="Вперед"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#arrow_right"/></svg></button>',
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 2,
+            appendArrows: $('.js-reviews-list')
+          }
+        }
+      ]
+    });
+  }
 });
 
 //перезапуск функции навешивания класса на шапку при скролле и ресайзе
@@ -80,5 +135,39 @@ $(document).on('click', '.js-menu-opener', function () {
 $(document).on('click', '.js-menu-closer', function () {
   $('body').removeClass('overflow');
   $('.header__center').removeClass('is-open');
+  return false;
+});
+
+//открытие/закрытие причины
+$('.js-reason').click(function () {
+  var el = $(this);
+
+  if($('body').width() < 768){
+    if(!el.hasClass('is-open')) {
+      $('.js-reason').removeClass('is-open');
+      $('.reason__dropdown').slideUp(200, function () {
+        setTimeout(function() {
+          el.find('.reason__dropdown').slideDown();
+          el.addClass('is-open');
+        }, 100);
+      });
+    } else {
+      el.find('.reason__dropdown').slideUp();
+      el.removeClass('is-open');
+    }
+  } else {
+    if(!el.hasClass('is-open')) {
+      $('.js-reason').removeClass('is-open');
+      $('.reason__dropdown').fadeOut(200, function () {
+        setTimeout(function() {
+          el.find('.reason__dropdown').fadeIn();
+          el.addClass('is-open');
+        }, 100);
+      });
+    } else {
+      el.find('.reason__dropdown').fadeOut();
+      el.removeClass('is-open');
+    }
+  }
   return false;
 });

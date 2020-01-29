@@ -1,0 +1,188 @@
+.reviews-block
+  margin-bottom: 70px
+
+  @media(min-width: 1200px)
+    margin-bottom: 120px
+
+.reviews-list
+  margin-bottom: 30px
+
+  @media(min-width: 768px)
+    margin-left: -20px
+    margin-right: -20px
+
+  @media(min-width: 1200px)
+    margin-bottom: 60px
+    margin-left: 0
+    margin-right: 0
+    padding-left: 70px
+    padding-right: 70px
+
+  &__item
+    @media(min-width: 768px)
+      padding-left: 20px
+      padding-right: 20px
+
+  .slick-prev
+    left: 5px
+
+  .slick-next
+    right: 5px
+
+  .slick-arrow
+    background-color: #3cb7ad
+    border-radius: 50%
+    height: 44px
+    width: 44px
+
+    &__icon
+      height: 16px
+      width: 7px
+
+.review
+  border: 1px solid #38bab0
+  border-radius: 20px
+  color: #3b424a
+  max-width: 320px
+  margin-left: auto
+  margin-right: auto
+  padding: 25px 25px 25px 20px
+  width: 100%
+
+  @media(min-width: 768px)
+    max-width: 100%
+
+  @media(min-width: 1200px)
+    display: flex
+    padding: 60px 45px 45px
+
+  &__top-block
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 25px
+
+    @media(min-width: 1200px)
+      align-items: flex-start
+      flex-direction: column
+      justify-content: flex-start
+      margin-bottom: 0
+
+  &__author
+    font-size: 18px
+    margin-bottom: 15px
+    padding-left: 22px
+
+    @media(min-width: 1200px)
+      padding-left: 0
+
+  &__author-country
+    align-items: center
+    display: flex
+    font-size: 14px
+    font-weight: 300
+    margin-bottom: 15px
+
+    img
+      margin-right: 8px
+      position: relative
+      top: -1px
+
+  &__author-type
+    align-items: center
+    border: 1px solid #c1c7cd
+    border-radius: 3px
+    display: inline-flex
+    font-size: 14px
+    font-weight: 300
+    height: 23px
+    margin-bottom: 10px
+    padding-left: 9px
+    padding-right: 9px
+
+  &__author-country,
+  &__author-type
+    @media(max-width: 1199px)
+      display: none
+
+  &__period
+    font-size: 14px
+    font-weight: 300
+    padding-left: 22px
+
+    @media(min-width: 1200px)
+      padding-left: 0
+
+  &__text
+    @media(min-width: 1200px)
+      padding-left: 20px
+      width: 100%
+
+  &__title
+    font-size: 18px
+    margin-bottom: 15px
+    padding-left: 22px
+
+  &__positive,
+  &__negative
+    font-size: 14px
+    font-weight: 300
+    padding-left: 23px
+    position: relative
+
+    &::before
+      border-radius: 50%
+      content: ''
+      height: 12px
+      left: 0
+      position: absolute
+      top: 3px
+      width: 12px
+      z-index: 1
+
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+
+  &__positive
+    margin-bottom: 15px
+
+    &::before
+      background-color: #69a7bb
+
+  &__negative
+    &::before
+      background-color: #d9e1e9
+
+.reviews-buttons
+  margin-left: auto
+  margin-right: auto
+  max-width: 300px
+  position: relative
+  text-align: center
+
+  .button
+    &:not(:last-child)
+      margin-bottom: 15px
+
+      @media(min-width: 1200px)
+        margin-bottom: 20px
+
+  .slick-prev
+    left: 0
+
+  .slick-next
+    right: 0
+
+  .slick-arrow
+    background-color: #3cb7ad
+    border-radius: 50%
+    height: 46px
+    top: 0
+    transform: none
+    width: 46px
+
+    &__icon
+      height: 16px
+      width: 7px

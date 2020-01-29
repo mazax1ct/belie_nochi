@@ -64,12 +64,12 @@
   <header class="header">
     <div class="header__inner container">
       <div class="header__left">
-        <a class="header__sogaz-logo" href="#">
+        <div class="header__sogaz-logo">
           <svg class="header__sogaz-svg" aria-hidden="true">
             <use xlink:href="#sogaz" />
           </svg>
-        </a>
-        <a class="header__wn-logo" href="#">
+        </div>
+        <a class="header__wn-logo" href="main.html">
           <svg class="header__wn-svg" aria-hidden="true">
             <use xlink:href="#wn" />
           </svg>
@@ -159,7 +159,7 @@
     <div class="container">
       <div class="news-block">
         <h2 class="decorated-title">Новости</h2>
-        <div class="news-list">
+        <div class="js-news-list news-list">
           <div class="news-list__item">
             <a class="news-item" href="#">
               <span class="news-item__date">31.02.2019</span>
@@ -260,7 +260,7 @@
         <h2 class="decorated-title">Выберите программу</h2>
         <div class="js-programs-slider programs-list">
           <div class="programs-list__item">
-            <div class="program">
+            <a class="program" href="#">
               <div class="program__image-block">
                 <div class="program__days">от<br> 5 дней</div>
                 <img src="images/content/img_2.jpg" alt="Базовая путевка">
@@ -280,10 +280,10 @@
                   </li>
                 </ol>
               </div>
-            </div>
+            </a>
           </div>
           <div class="programs-list__item">
-            <div class="program">
+            <a class="program" href="#">
               <div class="program__image-block">
                 <div class="program__days">от<br> 7 дней</div>
                 <img src="images/content/img_2.jpg" alt="Неделя красоты и здоровья">
@@ -303,10 +303,10 @@
                   </li>
                 </ol>
               </div>
-            </div>
+            </a>
           </div>
           <div class="programs-list__item">
-            <div class="program">
+            <a class="program" href="#">
               <div class="program__image-block">
                 <div class="program__days">от<br> 10 дней</div>
                 <img src="images/content/img_2.jpg" alt="Здоровый позвоночник">
@@ -326,7 +326,7 @@
                   </li>
                 </ol>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         <p class="text-center">
@@ -349,6 +349,30 @@
               </span>
             </a>
           </div>
+          <div class="infrastructure-list__item">
+            <a class="infrastructure-item" href="#">
+              <span class="infrastructure-item__image" style="background-image: url('images/content/img_3.jpg')"></span>
+              <span class="infrastructure-item__icon-block">
+                <img src="images/infrastructure_icons/icon_2.svg" alt="">
+              </span>
+              <span class="infrastructure-item__about">
+                <span class="infrastructure-item__title">Питание</span>
+                <span class="infrastructure-item__text">Уникальная программа питания по системе «Заказного меню»</span>
+              </span>
+            </a>
+          </div>
+          <div class="infrastructure-list__item">
+            <a class="infrastructure-item" href="#">
+              <span class="infrastructure-item__image" style="background-image: url('images/content/img_3.jpg')"></span>
+              <span class="infrastructure-item__icon-block">
+                <img src="images/infrastructure_icons/icon_3.svg" alt="">
+              </span>
+              <span class="infrastructure-item__about">
+                <span class="infrastructure-item__title">Медицина</span>
+                <span class="infrastructure-item__text">Широкий выбор лечебных и уходовых процедур на любой вкус</span>
+              </span>
+            </a>
+          </div>
         </div>
         <div class="infrastructure-block__text">
           <p>Санаторий предлагает своим пациентам не только комплексную медицинскую помощь, индивидуальный подход и качественное обслуживание, но небольшой номерной фонд, а также разнообразное, вкусное и полезное питание, разработанное
@@ -356,8 +380,230 @@
         </div>
       </div>
 
-      <h2 class="decorated-title">5 причин почему люди едут к нам</h2>
-      <h2 class="decorated-title">Отзывы</h2>
+      <div class="reasons-block">
+        <h2 class="decorated-title">5 причин почему люди едут&nbsp;к&nbsp;нам</h2>
+        <div class="reasons-list">
+          <div class="reasons-list__item">
+            <div class="js-reason reason">
+              <img class="reason__icon" src="images/reasons_icons/icon_1.svg" alt="УДОБНОЕ МЕСТОРАСПОЛОЖЕНИЕ">
+              <p class="reason__title">УДОБНОЕ<br> МЕСТОРАСПОЛОЖЕНИЕ</p>
+              <p class="reason__preview">Курорт расположен в 30 км к северу от города Санкт-Петербурга. Добраться до санатория можно как на машине или такси, так и на общественном транспорте.</p>
+              <div class="reason__dropdown">
+                <img class="reason__dropdown-icon" src="images/reasons_icons/icon_1.svg" alt="УДОБНОЕ МЕСТОРАСПОЛОЖЕНИЕ">
+                <p class="reason__dropdown-title">УДОБНОЕ МЕСТОРАСПОЛОЖЕНИЕ</p>
+                <p>Курорт расположен в 30 км к северу от города Санкт-Петербурга. Добраться до санатория можно как на машине или такси, так и на общественном транспорте.</p>
+              </div>
+            </div>
+          </div>
+          <div class="reasons-list__item">
+            <div class="js-reason reason">
+              <img class="reason__icon" src="images/reasons_icons/icon_2.svg" alt="УНИКАЛЬНАЯ ПРИРОДА">
+              <p class="reason__title">УНИКАЛЬНАЯ<br> ПРИРОДА</p>
+              <p class="reason__preview">Санаторий расположен на закрытой охраняемой территории, площадью 33 Га. Наши гости имеют уникальный шанс насладиться прекрасной северной природой.</p>
+              <div class="reason__dropdown">
+                <img class="reason__dropdown-icon" src="images/reasons_icons/icon_2.svg" alt="УНИКАЛЬНАЯ ПРИРОДА">
+                <p class="reason__dropdown-title">УНИКАЛЬНАЯ ПРИРОДА</p>
+                <p>Санаторий расположен на закрытой охраняемой территории, площадью 33 Га. Наши гости имеют уникальный шанс насладиться прекрасной северной природой.</p>
+              </div>
+            </div>
+          </div>
+          <div class="reasons-list__item">
+            <div class="js-reason reason">
+              <img class="reason__icon" src="images/reasons_icons/icon_3.svg" alt="ЛЕЧЕНИЕ И ОЗДОРОВЛЕНИЕ">
+              <p class="reason__title">ЛЕЧЕНИЕ<br> И ОЗДОРОВЛЕНИЕ</p>
+              <p class="reason__preview">Мы обладаем своими собственными природными лечебно-оздоровительными ресурсами и активно применяем «Cестрорецкие» гиттиевые грязи, обладающие редким и полезным свойствами</p>
+              <div class="reason__dropdown">
+                <img class="reason__dropdown-icon" src="images/reasons_icons/icon_3.svg" alt="ЛЕЧЕНИЕ И ОЗДОРОВЛЕНИЕ">
+                <p class="reason__dropdown-title">ЛЕЧЕНИЕ И ОЗДОРОВЛЕНИЕ</p>
+                <p>Мы обладаем своими собственными природными лечебно-оздоровительными ресурсами и активно применяем «Cестрорецкие» гиттиевые грязи, обладающие редким и полезным свойствами</p>
+              </div>
+            </div>
+          </div>
+          <div class="reasons-list__item">
+            <div class="js-reason reason">
+              <img class="reason__icon" src="images/reasons_icons/icon_4.svg" alt="ПРОФЕССИОНАЛИЗМ">
+              <p class="reason__title">ПРОФЕССИОНАЛИЗМ</p>
+              <p class="reason__preview">Наш комманда – высококвалифицированные специалисты с практическим опытом работы, которая использует современные медицинские технологии и методики.</p>
+              <div class="reason__dropdown">
+                <img class="reason__dropdown-icon" src="images/reasons_icons/icon_4.svg" alt="ПРОФЕССИОНАЛИЗМ">
+                <p class="reason__dropdown-title">ПРОФЕССИОНАЛИЗМ</p>
+                <p>Наши сотрудники – это слаженная команда высококвалифицированных специалистов с практическим опытом работы, которая использует только современные медицинские технологии и апробированные методики. Это позволяет сохранить стабильно высокое
+                  качество медицинских услуг. Кроме того, мы уважаем своих пациентов и сотрудников, строим отношения на взаимном доверии, честности и доброжелательности.</p>
+              </div>
+            </div>
+          </div>
+          <div class="reasons-list__item">
+            <div class="js-reason reason">
+              <img class="reason__icon" src="images/reasons_icons/icon_5.svg" alt="ВЫСОКИЕ СТАНДАРТЫ КАЧЕСТВА">
+              <p class="reason__title">ВЫСОКИЕ СТАНДАРТЫ<br> КАЧЕСТВА</p>
+              <p class="reason__preview">Изначально санаторий создавался как элитное учреждение, что сразу задало высокую планку качества его работы, которое поддерживается и по сей день.</p>
+              <div class="reason__dropdown">
+                <img class="reason__dropdown-icon" src="images/reasons_icons/icon_5.svg" alt="ВЫСОКИЕ СТАНДАРТЫ КАЧЕСТВА">
+                <p class="reason__dropdown-title">ВЫСОКИЕ СТАНДАРТЫ КАЧЕСТВА</p>
+                <p>Изначально санаторий создавался как элитное учреждение, что сразу задало высокую планку качества его работы, которое поддерживается и по сей день.</p>
+              </div>
+            </div>
+          </div>
+          <div class="reasons-list__item">
+            <div class="reason reason--alt">
+              <img class="reason__icon" src="images/reasons_icons/icon_6.svg" alt="">
+              <p class="reason__text">Мы заботимся о здоровье наших пациентов, окружая их вниманием и комфортом. Опираясь на профессионализм наших специалистов и последние достижения в области медицины, мы делаем все возможное для того, чтобы обеспечить
+                скорейшее выздоровление пациента и возвращение его к полноценной жизни.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-block">
+        <h2 class="decorated-title">Отзывы</h2>
+        <div class="js-reviews-list reviews-list">
+          <div class="reviews-list__item">
+            <div class="review">
+              <div class="review__top-block">
+                <p class="review__author">Natalia</p>
+                <p class="review__author-country"><img src="images/countries/russia.jpg" alt="Россия"> Россия</p>
+                <p class="review__author-type">Семья</p>
+                <p class="review__period">Время&nbsp;проживания:<br> Январь 2019</p>
+              </div>
+              <div class="review__text">
+                <p class="review__title">Очень хорошо</p>
+                <div class="review__positive">
+                  <ul>
+                    <li>- Прекрасное местоположение</li>
+                    <li>- Собственный пляж</li>
+                    <li>- Прекрасное питание</li>
+                    <li>- Шикарный вид из окна на море</li>
+                    <li>- Высокий уровень обслуживания</li>
+                  </ul>
+                </div>
+                <div class="review__negative">
+                  <ul>
+                    <li>Нет</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reviews-list__item">
+            <div class="review">
+              <div class="review__top-block">
+                <p class="review__author">Natalia</p>
+                <p class="review__author-country"><img src="images/countries/russia.jpg" alt="Россия"> Россия</p>
+                <p class="review__author-type">Семья</p>
+                <p class="review__period">Время&nbsp;проживания:<br> Январь 2019</p>
+              </div>
+              <div class="review__text">
+                <p class="review__title">Очень хорошо</p>
+                <div class="review__positive">
+                  <ul>
+                    <li>- Прекрасное местоположение</li>
+                    <li>- Собственный пляж</li>
+                    <li>- Прекрасное питание</li>
+                    <li>- Шикарный вид из окна на море</li>
+                    <li>- Высокий уровень обслуживания</li>
+                  </ul>
+                </div>
+                <div class="review__negative">
+                  <ul>
+                    <li>Нет</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reviews-list__item">
+            <div class="review">
+              <div class="review__top-block">
+                <p class="review__author">Natalia</p>
+                <p class="review__author-country"><img src="images/countries/russia.jpg" alt="Россия"> Россия</p>
+                <p class="review__author-type">Семья</p>
+                <p class="review__period">Время&nbsp;проживания:<br> Январь 2019</p>
+              </div>
+              <div class="review__text">
+                <p class="review__title">Очень хорошо</p>
+                <div class="review__positive">
+                  <ul>
+                    <li>- Прекрасное местоположение</li>
+                    <li>- Собственный пляж</li>
+                    <li>- Прекрасное питание</li>
+                    <li>- Шикарный вид из окна на море</li>
+                    <li>- Высокий уровень обслуживания</li>
+                  </ul>
+                </div>
+                <div class="review__negative">
+                  <ul>
+                    <li>Нет</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reviews-list__item">
+            <div class="review">
+              <div class="review__top-block">
+                <p class="review__author">Константин Константинопольский</p>
+                <p class="review__author-country"><img src="images/countries/russia.jpg" alt="Россия"> Россия</p>
+                <p class="review__author-type">Семья</p>
+                <p class="review__period">Время&nbsp;проживания:<br> Январь 2019</p>
+              </div>
+              <div class="review__text">
+                <p class="review__title">Очень очень плохо</p>
+                <div class="review__positive">
+                  <ul>
+                    <li>Нет</li>
+                  </ul>
+                </div>
+                <div class="review__negative">
+                  <ul>
+                    <li>- Ужасное местоположение</li>
+                    <li>- Есть не дали</li>
+                    <li>- Шарик отобрали</li>
+                    <li>- Шикарный вид из окна на море</li>
+                    <li>- Высокий уровень обслуживания</li>
+                    <li>- Ужасное местоположение</li>
+                    <li>- Есть не дали</li>
+                    <li>- Шарик отобрали</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews-buttons">
+          <a class="button" href="#">Все отзывы</a><br>
+          <button class="button button--green" type="button">
+            <svg class="button__icon button__icon--review" aria-hidden="true">
+              <use xlink:href="#review" />
+            </svg>
+            Оставить отзыв
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-block">
+      <div id="map" class="map"></div>
+      <div class="map-block__container container">
+        <div class="map-contacts">
+          <h2 class="map-contacts__title">Контакты</h2>
+          <p>
+            <span class="map-contacts__label">Телефоны:</span><br>
+            <a href="tel:+78002001141">+7 800 200-11-41</a> (отдел продаж)<br>
+            <a href="tel:+78123098142">+7 812 309-81-42</a><br>
+            <a href="tel:+78123186400">+7 812 318-64-00</a> (диспетчерская служба)<br>
+            <a href="+78123186400">+7 812 318-64-00</a> (доб. 101, cлужба приёма и размещения)
+          </p>
+          <p>
+            <span class="map-contacts__label">Адрес:</span><br>
+            Санкт-Петербург 38-й км, Приморского шоссе, д. 2
+          </p>
+          <p>
+            <span class="map-contacts__label">Email:</span><br>
+            <a href="mailto:sale-wn@sogaz-clinic.ru">sale-wn@sogaz-clinic.ru</a>
+          </p>
+          <p class="map-contacts__button-block"><a class="button" href="#">Как до нас добраться</a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -420,6 +666,7 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/map.js"></script>
 </body>
 
 </html>

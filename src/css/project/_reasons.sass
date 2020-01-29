@@ -1,0 +1,182 @@
+.reasons-block
+  margin-bottom: 70px
+
+  @media(min-width: 1200px)
+    margin-bottom: 120px
+
+.reasons-list
+  @media(min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  &__item
+    &:not(:last-child)
+      margin-bottom: 50px
+
+      @media(min-width: 1400px)
+        margin-bottom: 75px
+
+    @media(min-width: 768px)
+      display: flex
+      flex-direction: column
+      padding-left: 15px
+      padding-right: 15px
+      width: 33.33333%
+
+    @media(min-width: 1200px)
+      padding-left: 35px
+      padding-right: 35px
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3)
+      @media(min-width: 768px)
+        .reason__dropdown
+          bottom: auto
+          top: 0
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(5)
+      @media(min-width: 768px)
+        .reason__dropdown
+          left: 50%
+          transform: translateX(-50%)
+
+    &:nth-child(3)
+      @media(min-width: 768px)
+        .reason__dropdown
+          left: auto
+          right: 0
+
+    &:last-child
+      @media(min-width: 768px)
+        min-width: 100%
+        width: 100%
+
+.reason
+  max-width: 345px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  text-align: center
+
+  @media(min-width: 768px)
+    height: 100%
+
+  &.js-reason
+    cursor: pointer
+
+  &.is-open
+    z-index: 2
+
+  &--alt
+    background-color: #38bab0
+    border-radius: 15px
+    color: #fff
+    font-size: 14px
+    margin-left: auto
+    margin-right: auto
+    max-width: 847px
+    padding: 30px 20px 25px
+
+    @media(min-width: 768px)
+      align-items: center
+      display: flex
+      padding: 24px 30px
+
+    @media(min-width: 1200px)
+      font-size: 16px
+      line-height: 1.2
+
+    .reason__icon
+      height: 62px
+      width: 62px
+
+      @media(min-width: 768px)
+        height: 81px
+        margin-bottom: 0
+        min-width: 81px
+        width: 81px
+
+    .reason__text
+      text-align: left
+
+      @media(min-width: 768px)
+        padding-left: 30px
+
+  &__icon
+    height: 74px
+    margin-bottom: 20px
+    width: 74px
+
+    @media(min-width: 1200px)
+      height: 99px
+      width: 99px
+
+  &__title
+    color: #38bab0
+    font-size: 16px
+    margin-bottom: 0
+    text-transform: uppercase
+
+    @media(min-width: 1200px)
+      font-size: 24px
+      margin-bottom: 25px
+
+  &__preview
+    color: #1c3877
+    display: none
+    font-size: 14px
+    margin-bottom: 0
+
+    @media(min-width: 992px)
+      display: block
+
+    @media(min-width: 1200px)
+      font-size: 16px
+
+  &__dropdown
+    color: #1c3877
+    display: none
+    font-size: 14px
+    padding-top: 15px
+    text-align: left
+
+    @media(min-width: 768px)
+      background-color: rgba(#fff, 0.9)
+      border-radius: 15px
+      bottom: 0
+      box-shadow: 0px 8px 27px 0px rgba(100,177,172,0.4)
+      color: #1c3877
+      left: 0
+      padding: 30px 20px 25px
+      position: absolute
+      top: auto
+      width: 350px
+      z-index: 1
+
+    @media(min-width: 1200px)
+      padding: 40px 60px 50px
+      width: 475px
+
+
+  &__dropdown-icon
+    display: none
+    height: 66px
+    margin-bottom: 35px
+    width: 66px
+
+    @media(min-width: 768px)
+      display: block
+
+  &__dropdown-title
+    color: #38bab0
+    display: none
+    font-size: 20px
+    margin-bottom: 20px
+    text-transform: uppercase
+
+    @media(min-width: 768px)
+      display: block
