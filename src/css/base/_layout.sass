@@ -20,8 +20,30 @@ body
     overflow: hidden
     -webkit-overflow-scrolling: touch
 
+  &:not([class="main-page"])
+    @media(min-width: 992px)
+      background: url('../images/inner-bg.png') no-repeat 50% 132px #fff
+      background-size: contain
+
+    @media(min-width: 1200px)
+      background-position: 50% 136px
+
+    @media(min-width: 1300px)
+      background-position: 50% 173px
+
+    @media(min-width: 1680px)
+      background-size: auto auto
+
 .wrapper
   flex: 1 0 auto
+  overflow-x: hidden
+  padding-top: 150px
+
+  @media(min-width: 992px)
+    padding-top: 250px
+
+  @media(min-width: 1400px)
+    padding-top: 400px
 
 .container
   margin-left: auto
@@ -34,10 +56,49 @@ body
     padding-left: 40px
     padding-right: 40px
 
-.inner-page
-  .page-content
-    @media(min-width: 992px)
-      padding-bottom: 70px
+.page-content
+  padding-bottom: 70px
 
-    @media(min-width: 1200px)
-      padding-bottom: 110px
+  @media(min-width: 1200px)
+    padding-bottom: 110px
+
+.main-page
+  .wrapper
+    padding-top: 0
+
+  .page-content
+    padding-bottom: 0
+
+.article-block
+  margin-left: auto
+  margin-right: auto
+  max-width: 600px
+
+  @media(min-width: 1200px)
+    max-width: 700px
+
+  @media(min-width: 1400px)
+    max-width: 790px
+
+.block-1
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 40px
+  max-width: 1175px
+
+  @media(min-width: 768px)
+    align-items: center
+    display: flex
+    flex-direction: row-reverse
+
+  &__image
+    margin-bottom: 15px
+    text-align: center
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      min-width: 40%
+
+  &__text
+    @media(min-width: 768px)
+      padding-right: 60px

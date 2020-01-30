@@ -1,6 +1,115 @@
+.main-page
+  .header
+    background-color: transparent
+    box-shadow: none
+    position: absolute
+
+    @media(min-width: 992px)
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3) 50%, transparent)
+
+    &.half-scrolled
+      @media(max-width: 991px)
+        transform: translateY(-100%)
+
+    &.scrolled
+      @media(max-width: 991px)
+        background-color: #fff
+        box-shadow: 0 0 6px 3px rgba(0,0,0,0.3)
+        padding-top: 15px
+        padding-bottom: 15px
+        position: fixed
+        transform: translateY(0)
+
+      .header__sogaz-svg,
+      .header__wn-svg
+        fill: #1d3f7a
+
+    &__left
+      @media(min-width: 992px)
+        display: block
+
+      @media(min-width: 1200px)
+        align-items: flex-end
+        display: flex
+
+    &__sogaz-logo
+      @media(min-width: 992px)
+        margin-right: 0
+
+      @media(min-width: 1200px)
+        margin-right: 18px
+
+      @media(min-width: 1300px)
+        margin-right: 35px
+
+    &__sogaz-svg
+      fill: #fff
+
+    &__wn-logo
+      @media(min-width: 992px)
+        display: none
+
+      @media(min-width: 1200px)
+        display: block
+
+      @media(min-width: 1300px)
+        width: 172px
+
+    &__wn-svg
+      fill: #fff
+
+    &__contacts
+      @media(min-width: 992px)
+        color: #fff
+
+      a
+        @media(min-width: 992px)
+          color: #fff
+
+    &__shadow
+      @media(min-width: 992px)
+        bottom: -140px
+        height: 140px
+        left: 50%
+        max-width: 1600px
+        overflow: hidden
+        position: absolute
+        top: auto
+        transform: translateX(-50%)
+        width: 94%
+
+      &::after
+        @media(min-width: 992px)
+          box-shadow: 0px 45px 90px 0px rgba(0,0,0,0.75)
+
+    .main-menu
+      @media(min-width: 992px)
+        font-size: 14px
+
+      @media(min-width: 1300px)
+        font-size: 16px
+
+    .main-menu__item
+      &:not(:last-child)
+        @media(min-width: 992px)
+          margin-right: 30px
+
+    .main-menu__link
+      @media(min-width: 992px)
+        color: #fff
+
+    .social-link
+      background-color: #fff
+
+    .social-link__icon
+      fill: #2c353a
+
 .header
+  background-color: #fff
+  box-shadow: 0 0 6px 3px rgba(0,0,0,0.3)
+  font-weight: 400
   left: 0
-  position: absolute
+  position: fixed
   padding-top: 25px
   padding-bottom: 25px
   top: 0
@@ -10,28 +119,13 @@
   z-index: 50
 
   @media(min-width: 992px)
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3) 50%, transparent)
+    background-color: #fff
+    box-shadow: 0 0 6px 3px rgba(0,0,0,0.05)
+    position: absolute
 
   @media(min-width: 1300px)
     padding-top: 30px
     padding-bottom: 30px
-
-  &.half-scrolled
-    @media(max-width: 991px)
-      transform: translateY(-100%)
-
-  &.scrolled
-    @media(max-width: 991px)
-      background-color: #fff
-      box-shadow: 0 0 6px 3px rgba(0,0,0,0.3)
-      padding-top: 15px
-      padding-bottom: 15px
-      position: fixed
-      transform: translateY(0)
-
-    .header__sogaz-svg,
-    .header__wn-svg
-      fill: #1d3f7a
 
   &__inner
     align-items: center
@@ -42,7 +136,7 @@
       align-items: flex-end
 
   &__left
-    @media(min-width: 1200px)
+    @media(min-width: 992px)
       align-items: flex-end
       display: flex
 
@@ -51,17 +145,15 @@
     width: 46px
 
     @media(min-width: 992px)
-      width: 50px
-
-    @media(min-width: 1200px)
       margin-right: 18px
+      width: 50px
 
     @media(min-width: 1300px)
       margin-right: 35px
       width: 74px
 
   &__sogaz-svg
-    fill: #fff
+    fill: #1d3f7a
     height: 71px
     vertical-align: top
     width: 46px
@@ -78,14 +170,14 @@
     display: none
     width: 133px
 
-    @media(min-width: 1200px)
+    @media(min-width: 992px)
       display: block
 
     @media(min-width: 1300px)
       width: 172px
 
   &__wn-svg
-    fill: #fff
+    fill: #1d3f7a
     height: 76px
     vertical-align: top
     width: 133px
@@ -149,13 +241,20 @@
 
     @media(min-width: 992px)
       border-top: none
+      color: #1d3f7a
       display: flex
       font-size: 14px
       padding: 0
 
+    @media(min-width: 1300px)
+      font-size: 16px
+
     a
       color: #fff
       text-decoration: none
+
+      @media(min-width: 992px)
+        color: #1d3f7a
 
       &:hover,
       &:focus
@@ -179,8 +278,11 @@
       @media(min-width: 1400px)
         margin-bottom: 15px
 
+    .social-link
+      background-color: #1d3f7a
+
     .social-link__icon
-      fill: #2c353a
+      fill: #fff
 
     .button
       @media(min-width: 992px)
@@ -208,7 +310,7 @@
 
     &::after
       @media(min-width: 992px)
-        box-shadow: 0px 45px 90px 0px rgba(0,0,0,0.75)
+        box-shadow: 0px 45px 40px 0px rgba(0,0,0,0.3)
         border-radius: 150px / 40px
         content: ''
         display: block
@@ -235,9 +337,12 @@
 
   @media(min-width: 992px)
     display: flex
-    font-size: 14px
+    font-size: 12px
     margin: 0
     padding: 0
+
+  @media(min-width: 1200px)
+    font-size: 14px
 
   @media(min-width: 1300px)
     font-size: 16px
@@ -249,8 +354,11 @@
 
     &:not(:last-child)
       @media(min-width: 992px)
-        margin-right: 30px
+        margin-right: 15px
         margin-bottom: 0
+
+      @media(min-width: 1200px)
+        margin-right: 30px
 
   &__link
     color: #fff
@@ -261,6 +369,7 @@
     vertical-align: top
 
     @media(min-width: 992px)
+      color: #1d3f7a
       padding-top: 0
       padding-bottom: 0
 

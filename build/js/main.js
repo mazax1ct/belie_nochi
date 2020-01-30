@@ -173,3 +173,11 @@ $('.js-reason').click(function () {
   }
   return false;
 });
+
+
+$(document).on('click', '.js-accordion-toggler', function () {
+  var el = $(this);
+  el.parent().find('.accordion__dropdown-block').fadeToggle(300);
+  el.parent().find('.accordion__button').toggleClass('open');
+  return false;
+});

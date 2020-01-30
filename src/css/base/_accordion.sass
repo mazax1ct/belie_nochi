@@ -1,0 +1,115 @@
+.accordion
+  max-width: 995px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 30px
+
+  @media(min-width: 1200px)
+    margin-bottom: 50px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__title
+    align-items: center
+    color: #1d3f7a
+    cursor: pointer
+    display: flex
+    font-weight: 400
+    margin-bottom: 0
+    min-height: 30px
+    position: relative
+    padding-left: 40px
+    padding-right: 40px
+
+    @media(min-width: 768px)
+      min-height: 60px
+      padding-left: 90px
+      padding-right: 45px
+
+    @media(min-width: 1200px)
+      min-height: 90px
+      padding-left: 130px
+      padding-right: 95px
+
+  &__number
+    align-items: center
+    border: 2px solid #3cb7ad
+    border-radius: 50%
+    display: flex
+    font-weight: 300
+    height: 30px
+    justify-content: center
+    left: 0
+    position: absolute
+    top: 0
+    width: 30px
+
+    @media(min-width: 768px)
+      font-size: 20px
+      height: 60px
+      top: 50%
+      transform: translateY(-50%)
+      width: 60px
+
+    @media(min-width: 1200px)
+      font-size: 43px
+      height: 90px
+      width: 90px
+
+  &__button
+    align-items: center
+    background-color: #3cb7ad
+    border-radius: 50%
+    content: '+'
+    color: #fff
+    display: flex
+    font-weight: 400
+    justify-content: center
+    height: 30px
+    left: auto
+    position: absolute
+    right: 0
+    top: 0
+    width: 30px
+
+    @media(min-width: 768px)
+      top: 50%
+      transform: translateY(-50%)
+
+    &::after
+      content: '+'
+
+    &.open
+      &::after
+        content: '-'
+
+  &__dropdown-block
+    display: none
+    padding-top: 40px
+
+  &__dropdown
+    background-color: #afe1dd
+    position: relative
+    padding: 25px 15px
+
+    @media(min-width: 768px)
+      padding: 45px
+
+    @media(min-width: 1200px)
+      padding-left: 130px
+
+    &::after
+      background-color: #afe1dd
+      content: ''
+      height: 100%
+      left: 50%
+      position: absolute
+      transform: translateX(-50%)
+      top: 0
+      width: 10000px
+      z-index: 1
+
+  &__dropdown-inner
+    position: relative
+    z-index: 2

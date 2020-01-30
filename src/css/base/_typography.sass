@@ -2,6 +2,7 @@ body
   color: #151515
   font-family: 'Fira Sans', Arial, sans-serif
   font-size: 16px
+  font-weight: 300
   line-height: 1.388
 
   @media(min-width: 1400px)
@@ -20,35 +21,84 @@ h6,.h6
   font-weight: 400
   text-transform: uppercase
 
+h1,.h1
+  margin-top: 0
+
 h1,.h1,
 h2,.h2
   font-size: 23px
 
-  @media(min-width: 1400px)
+  @media(min-width: 1200px)
     font-size: 36px
 
 h3,.h3,
 h4,.h4,
 h5,.h5,
 h6,.h6
-  font-size: 24px
+  font-size: 18px
 
-h1,.h1,
-h2,.h2,
-h3,.h3,
-h4,.h4,
-h5,.h5,
-h6,.h6,
+  @media(min-width: 1200px)
+    font-size: 24px
+
+h3,.h3
+ margin-top: 50px
+
 p,
 ul,
 ol,
 table,
 .table-responsive
   margin-top: 0
-  margin-bottom: 20px
+  margin-bottom: 15px
 
   &:last-child
     margin-bottom: 0
+
+ul,
+ol
+  padding-left: 0
+
+li
+  margin-bottom: 15px
+
+  &:last-child
+    margin-bottom: 0
+
+.marked-list
+  list-style: none
+
+  li
+    position: relative
+
+    &::before
+      background-color: #3db7ad
+      border-radius: 50%
+      content: ''
+      height: 6px
+      left: -14px
+      position: absolute
+      top: 0.5em
+      width: 6px
+
+      @media(min-width: 414px)
+        left: -20px
+
+.numbered-list
+  list-style-type: none
+  counter-reset: num
+
+  li
+    position: relative
+    padding-left: 40px
+
+    &::before
+      content: counter(num) '. '
+      counter-increment: num
+      color: #38b9af
+      font-weight: 400
+      left: 0
+      position: absolute
+      top: 0
 
 .decorated-title
   background: url('../images/decor.svg') no-repeat 50% 0 / 98px 5px transparent
@@ -78,3 +128,13 @@ img
   height: auto
   max-width: 100%
   vertical-align: top
+
+.color-blue
+  color: #1d3f7a
+
+.fw_normal
+  font-weight: 400
+
+.tablet_mb90
+  @media(min-width: 768px)
+    margin-bottom: 90px
