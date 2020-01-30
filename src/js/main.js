@@ -15,6 +15,8 @@ var resize_scroll = function(e) {
   }
 };
 
+var targetElement = document.querySelector(".header__center");
+
 $(document).ready(function () {
   //запуск функции навешивания класса на шапку
   resize_scroll();
@@ -126,16 +128,14 @@ $(window).on("scroll", resize_scroll).on("resize", resize_scroll);
 
 //открытие меню
 $(document).on('click', '.js-menu-opener', function () {
-  $('body').addClass('overflow');
-  $('.wrapper').addClass('overflow');
+  bodyScrollLock.disableBodyScroll(targetElement);
   $('.header__center').addClass('is-open');
   return false;
 });
 
 //закрытие меню
 $(document).on('click', '.js-menu-closer', function () {
-  $('body').removeClass('overflow');
-  $('.wrapper').removeClass('overflow');
+  bodyScrollLock.enableBodyScroll(targetElement);
   $('.header__center').removeClass('is-open');
   return false;
 });
