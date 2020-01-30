@@ -127,6 +127,7 @@ $(window).on("scroll", resize_scroll).on("resize", resize_scroll);
 //открытие меню
 $(document).on('click', '.js-menu-opener', function () {
   $('body').addClass('overflow');
+  $('.wrapper').addClass('overflow');
   $('.header__center').addClass('is-open');
   return false;
 });
@@ -134,6 +135,7 @@ $(document).on('click', '.js-menu-opener', function () {
 //закрытие меню
 $(document).on('click', '.js-menu-closer', function () {
   $('body').removeClass('overflow');
+  $('.wrapper').removeClass('overflow');
   $('.header__center').removeClass('is-open');
   return false;
 });
