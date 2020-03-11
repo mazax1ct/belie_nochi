@@ -91,6 +91,24 @@ $(document).ready(function () {
     }
   }
 
+  //слайдер галереи
+  if ($('.js-gallery-slider').length) {
+    $('.js-gallery-slider').slick({
+      centerPadding: '50px',
+      centerMode: true,
+      appendArrows: '.js-gallery-nav',
+      autoplay: false,
+      mobileFirst: true,
+      slidesToShow: 3,
+      infinite: true,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev slick-arrow" title="Назад"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#arrow_left"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next slick-arrow" title="Вперед"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#arrow_right"/></svg></button>',
+      dots: false,
+      variableWidth: true
+    });
+  }
+
   //слайдер отзывов
   if ($('.js-reviews-list').length) {
     $('.js-reviews-list').slick({
@@ -108,13 +126,15 @@ $(document).ready(function () {
         {
           breakpoint: 767,
           settings: {
+            slidesToScroll: 2,
             slidesToShow: 2
           }
         },
         {
           breakpoint: 1199,
           settings: {
-            slidesToShow: 2,
+            slidesToScroll: 3,
+            slidesToShow: 3,
             appendArrows: $('.js-reviews-list')
           }
         }
@@ -138,6 +158,40 @@ $(document).on('click', '.js-menu-closer', function () {
   bodyScrollLock.enableBodyScroll(targetElement);
   $('.header__center').removeClass('is-open');
   return false;
+});
+
+//открытие/закрытие проблемы
+$('.js-problem').click(function () {
+  var el = $(this);
+
+  if($('body').width() < 768){
+    if(!el.hasClass('is-open')) {
+      $('.js-problem').removeClass('is-open');
+      $('.problem__dropdown').slideUp(200, function () {
+        setTimeout(function() {
+          el.find('.problem__dropdown').slideDown();
+          el.addClass('is-open');
+        }, 100);
+      });
+    } else {
+      el.find('.problem__dropdown').slideUp();
+      el.removeClass('is-open');
+    }
+  } else {
+    if(!el.hasClass('is-open')) {
+      $('.js-problem').removeClass('is-open');
+      $('.problem__dropdown').fadeOut(200, function () {
+        setTimeout(function() {
+          el.find('.problem__dropdown').fadeIn();
+          el.addClass('is-open');
+        }, 100);
+      });
+    } else {
+      el.find('.problem__dropdown').fadeOut();
+      el.removeClass('is-open');
+    }
+  }
+  //return false;
 });
 
 //открытие/закрытие причины
@@ -173,7 +227,6 @@ $('.js-reason').click(function () {
   }
   return false;
 });
-
 
 $(document).on('click', '.js-accordion-toggler', function () {
   var el = $(this);

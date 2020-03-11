@@ -5,7 +5,7 @@
     margin-bottom: 100px
 
 .programs-list
-  margin-bottom: 60px
+  margin-bottom: 40px
 
   @media(min-width: 992px)
     display: flex
@@ -15,7 +15,7 @@
 
   &__item
     @media(min-width: 992px)
-      width: 33.33333%
+      width: 25%
 
   .slick-prev
     left: -15px
@@ -85,49 +85,14 @@
       height: 76px
       width: 76px
 
-  &__info
-    font-size: 14px
-
-    @media(min-width: 1200px)
-      font-size: 16px
-      padding-left: 25px
-      padding-right: 25px
-
-    ol
-      list-style-type: none
-      counter-reset: num
-      margin: 0
-      padding: 0
-
-      & > li
-        color: #1c3877
-        margin-bottom: 5px
-        padding-left: 20px
-
-        &::before
-          content: counter(num) '. '
-          counter-increment: num
-          color: #38b9af
-          margin-left: -15px
-
-      ul
-        color: #151515
-        list-style: none
-        margin: 0
-        padding: 0 0 0 1px
-
-        li
-          margin-top: 5px
-          margin-bottom: 0
-
   &__title
     color: #1c3877
     font-size: 18px
-    margin-bottom: 10px
+    margin-bottom: 0
+    text-align: center
 
     @media(min-width: 1200px)
       font-size: 24px
-      margin-bottom: 20px
 
 a.program
   &:hover,

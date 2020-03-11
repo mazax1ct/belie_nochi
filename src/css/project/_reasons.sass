@@ -5,6 +5,10 @@
     margin-bottom: 120px
 
 .reasons-list
+  max-width: 850px
+  margin-left: auto
+  margin-right: auto
+
   @media(min-width: 768px)
     display: flex
     flex-wrap: wrap
@@ -20,11 +24,11 @@
     @media(min-width: 768px)
       display: flex
       flex-direction: column
-      padding-left: 15px
-      padding-right: 15px
+      //padding-left: 15px
+      //padding-right: 15px
       width: 33.33333%
 
-    @media(min-width: 1200px)
+    //@media(min-width: 1200px)
       padding-left: 35px
       padding-right: 35px
 
@@ -69,6 +73,13 @@
   &.js-reason
     cursor: pointer
 
+    &:hover
+      .reason__icon
+        transform: scale(1.1)
+
+      .reason__title-text
+        border-bottom-color: #38bab0
+
   &.is-open
     z-index: 2
 
@@ -110,6 +121,8 @@
   &__icon
     height: 74px
     margin-bottom: 20px
+    transform: scale(1)
+    transition: transform 0.3s
     width: 74px
 
     @media(min-width: 1200px)
@@ -124,10 +137,14 @@
 
     @media(min-width: 1200px)
       font-size: 24px
-      margin-bottom: 25px
+      //margin-bottom: 25px
       max-width: 258px
       margin-left: auto
       margin-right: auto
+
+  &__title-text
+    border-bottom: 1px dashed transparent
+    transition: border-color-color 0.3s
 
   &__preview
     color: #1c3877
