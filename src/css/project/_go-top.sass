@@ -1,0 +1,26 @@
+.go-top
+  align-items: center
+  background-color: #3eb7ae
+  border: 1px solid #3eb7ae
+  border-radius: 50%
+  bottom: 40px
+  color: #fff
+  cursor: pointer
+  display: none
+  height: 50px
+  justify-content: center
+  left: 40px
+  padding: 0
+  position: fixed
+  top: auto
+  text-align: center
+  transition: background-color 0.3s, border-color 0.3s
+  width: 50px
+
+  &.is-active
+    @media(min-width: 992px)
+      display: flex
+
+  &__icon
+    height: 8px
+    width: 19px

@@ -1,9 +1,6 @@
 .reasons-block
   margin-bottom: 70px
 
-  @media(min-width: 1200px)
-    margin-bottom: 120px
-
 .reasons-list
   max-width: 850px
   margin-left: auto
@@ -24,13 +21,7 @@
     @media(min-width: 768px)
       display: flex
       flex-direction: column
-      //padding-left: 15px
-      //padding-right: 15px
       width: 33.33333%
-
-    //@media(min-width: 1200px)
-      padding-left: 35px
-      padding-right: 35px
 
     &:nth-child(1),
     &:nth-child(2),
@@ -79,6 +70,9 @@
 
       .reason__title-text
         border-bottom-color: #38bab0
+
+      .reason__preview-text
+        border-bottom-color: #1c3877
 
   &.is-open
     z-index: 2
@@ -137,7 +131,6 @@
 
     @media(min-width: 1200px)
       font-size: 24px
-      //margin-bottom: 25px
       max-width: 258px
       margin-left: auto
       margin-right: auto
@@ -156,7 +149,11 @@
       display: block
 
     @media(min-width: 1200px)
-      font-size: 16px
+      font-size: 19px
+
+  &__preview-text
+    border-bottom: 1px dashed transparent
+    transition: border-color-color 0.3s
 
   &__dropdown
     color: #1c3877
@@ -182,6 +179,15 @@
       padding: 40px 60px 50px
       width: 475px
 
+    &--small
+      @media(min-width: 768px)
+        font-size: 16px
+        padding: 35px 40px
+        width: 305px
+
+      @media(min-width: 1200px)
+        padding: 35px 40px
+        width: 305px
 
   &__dropdown-icon
     display: none

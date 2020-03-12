@@ -1,6 +1,9 @@
 .rules-block
   margin-bottom: 40px
 
+  @media(min-width: 1200px)
+    margin-bottom: 100px
+
   h2
     max-width: 450px
     margin-left: auto
@@ -34,8 +37,18 @@
       margin-bottom: 0
       width: 25%
 
-    img
-      margin-bottom: 30px
+.rule
+  text-align: center
 
-    a
-      color: #3db7ad
+  &__link
+    display: inline-block
+    margin-bottom: 30px
+
+    &:hover
+      img
+        transform: scale(1.2)
+
+    img
+      transition: transform 0.3s
+      transform: scale(1)
+      will-change: transform

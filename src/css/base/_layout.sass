@@ -21,18 +21,46 @@ body
     -webkit-overflow-scrolling: touch
 
   &:not([class="main-page"])
-    @media(min-width: 992px)
-      background: url('../images/inner-bg.png') no-repeat 50% 132px #fff
-      background-size: contain
+    &::before,
+    &::after
+      @media(min-width: 992px)
+        background-size: 100% auto
+        background-color: transparent
+        background-repeat: no-repeat
+        background-position: 0 0
+        content: ''
+        height: 570px
+        position: absolute
+        top: 122px
+        width: 300px
+        z-index: 1
 
-    @media(min-width: 1200px)
-      background-position: 50% 136px
+      @media(min-width: 1200px)
+        top: 126px
 
-    @media(min-width: 1300px)
-      background-position: 50% 173px
+      @media(min-width: 1300px)
+        height: 750px
+        top: 173px
+        width: 400px
 
-    @media(min-width: 1680px)
-      background-size: auto auto
+      @media(min-width: 1680px)
+        height: 1021px
+        width: 546px
+
+    &::before
+      @media(min-width: 992px)
+        background-image: url('../images/bg-left.png')
+        left: 0
+
+    &::after
+      @media(min-width: 992px)
+        background-image: url('../images/bg-right.png')
+        left: auto
+        right: 0
+
+    .page-content
+      position: relative
+      z-index: 2
 
 .wrapper
   flex: 1 0 auto
@@ -43,7 +71,7 @@ body
     padding-top: 250px
 
   @media(min-width: 1400px)
-    padding-top: 400px
+    padding-top: 300px
 
 .container
   margin-left: auto
