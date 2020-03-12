@@ -203,42 +203,40 @@ $(document).ready(function () {
 
   //слайдер ссылок
   if ($('.js-links-slider').length) {
-    if($('body').width() > 767) {
-      $('.js-links-slider').slick({
-        adaptiveHeight: true,
-        autoplay: false,
-        mobileFirst: true,
-        slidesToShow: 1,
-        infinite: true,
-        arrows: true,
-        prevArrow: '<button type="button" class="slick-prev slick-arrow" title="Назад"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#arrow_left"/></svg></button>',
-        nextArrow: '<button type="button" class="slick-next slick-arrow" title="Вперед"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#arrow_right"/></svg></button>',
-        dots: false,
-        responsive: [
-          {
-            breakpoint: 767,
-            settings: {
-              slidesToScroll: 2,
-              slidesToShow: 2
-            }
-          },
-          {
-            breakpoint: 991,
-            settings: {
-              slidesToScroll: 3,
-              slidesToShow: 3,
-            }
-          },
-          {
-            breakpoint: 1199,
-            settings: {
-              slidesToScroll: 4,
-              slidesToShow: 4,
-            }
+    $('.js-links-slider').slick({
+      adaptiveHeight: true,
+      autoplay: false,
+      mobileFirst: true,
+      slidesToShow: 1,
+      infinite: true,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev slick-arrow" title="Назад"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#arrow_left"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next slick-arrow" title="Вперед"><svg class="slick-arrow__icon" aria-hidden="true"><use xlink:href="#arrow_right"/></svg></button>',
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToScroll: 2,
+            slidesToShow: 2
           }
-        ]
-      });
-    }
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToScroll: 3,
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToScroll: 4,
+            slidesToShow: 4,
+          }
+        }
+      ]
+    });
   }
 });
 

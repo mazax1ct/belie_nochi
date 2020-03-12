@@ -17,8 +17,15 @@
     display: block
     margin-left: 0
     margin-right: 0
-    padding-left: 40px
-    padding-right: 40px
+
+    @media(min-width: 768px)
+      padding-left: 40px
+      padding-right: 40px
+
+    .links-slider__slide
+      margin-bottom: 0
+      padding: 20px
+      max-width: 100%
 
   .slick-track
     min-width: 100%
@@ -42,16 +49,15 @@
       width: 25%
 
   .slick-prev
-    left: 5px
+    left: -15px
 
   .slick-next
-    right: 5px
+    right: -15px
 
   .slick-arrow
     background-color: #3cb7ad
     border-radius: 50%
     height: 37px
-    margin-top: -10px
     width: 37px
 
     &__icon
@@ -68,12 +74,13 @@
   overflow: hidden
   margin-left: auto
   margin-right: auto
-  padding-bottom: 100%
+  padding-bottom: 260px
   position: relative
   text-decoration: none
   width: 260px
 
   @media(min-width: 768px)
+    padding-bottom: 100%
     width: 100%
 
   &:hover,
