@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="26" height="26">
+<style type="text/css">
+	.st0{fill:#38b9af;}
+	.st1{fill:none;stroke:#38b9af;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="st0" d="M11.7,16.7h3.6v1.6h-3.6v2.3H9v-2.3H7.5v-1.6H9v-1.4H7.5v-1.8H9V6.2h3.8c1.8,0,3.2,0.4,4.2,1.2c1,0.8,1.5,1.9,1.5,3.4c0,1.6-0.5,2.7-1.5,3.5c-1,0.7-2.4,1.1-4.2,1.1h-1.1V16.7z M11.7,8.1v5.4h1c1,0,1.7-0.2,2.2-0.6s0.8-1.1,0.8-2.1c0-1.7-1-2.6-3-2.6H11.7z"/>
+	<circle class="st1" cx="13" cy="13" r="12"/>
+</g>
+</svg>

@@ -42,6 +42,7 @@ $(document).ready(function () {
     $('.js-slider').slick({
       pauseOnHover: false,
       autoplay: true,
+      autoplaySpeed: 5000,
       fade: true,
       mobileFirst: true,
       slidesToShow: 1,
@@ -231,7 +232,7 @@ $(document).ready(function () {
         {
           breakpoint: 1199,
           settings: {
-            slidesToScroll: 4,
+            slidesToScroll: 1,
             slidesToShow: 4,
           }
         }
